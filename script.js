@@ -10,6 +10,10 @@ var quotes = [
     source: "Maya Angelou"
     },
     {
+    quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    source: "Winston Churchill"
+    },
+    {
     quote: "But we cannot simply sit and stare at our wounds forever.",
     source: "Haruki Murakami"
     },
@@ -18,12 +22,20 @@ var quotes = [
     source: "Chinese proverb"
     },
     {
+    quote: "If you want to go fast, go alone. If you want to go far, go together.",
+    source: "African proverb"
+    },
+    {
     quote: "Have fun even if it's not the same kind of fun everyone else is having.",
     source: "C.S.Lewis"  
     },
     {
     quote: "He who delights in solitude is either a wild beast or a god.",
     source: "Friedrich Nietzche"
+    },
+    {
+    quote: "You don’t have to be great to start, but you have to start to be great.",
+    source: "Zig Ziglar."
     },
     {
     quote: "I have learned all kinds of things from my many mistakes. The one thing I never learn is to stop making them.",
@@ -36,7 +48,8 @@ var quotes = [
     {
     quote: "Plant your garden and decorate your own soul, instead of waiting for someone to bring you flowers.",
     source: "Jose Luis Borges"
-    },{
+    },
+    {
     quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
     source: "Aristotle"
     }, 
@@ -57,15 +70,8 @@ var quotes = [
     },
  ];
 
-//function to get a random quote from an array of quotes
-/*function getRandomQuote () {
-    var randomNum = Math.floor(Math.random() * (quotes.length));
-    var randomQuote = quotes[randomNum];
-    return randomQuote;*/
 
-//}
-
-var lastRandomNum = -1; // Declare outside function to keep its value between calls
+var lastRandomNum = -1; 
 
 function getRandomQuote() {
     var randomNum;
@@ -73,7 +79,7 @@ function getRandomQuote() {
         randomNum = Math.floor(Math.random() * (quotes.length));
     } while (randomNum === lastRandomNum);
 
-    lastRandomNum = randomNum; // Update last random number after generating new one
+    lastRandomNum = randomNum; 
     return quotes[randomNum];
 }
 
