@@ -1,0 +1,77 @@
+@media (max-width: 612px) {
+    .quote {
+      font-size: 2.5rem;
+    }
+    .quote:before, .quote:after {
+      font-size: 3rem;
+    }
+    .source {
+      font-size: 1rem;
+    }
+  }
+
+body{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(90,215,165);
+}
+
+#quoteBox{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    text-align: start;
+}
+
+.quote{
+    font-size: 4.5rem;
+    line-height: 1.1;
+    font-weight: bold;
+    position: relative;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.quote::before{
+    content: "“";
+}
+
+.quote::after{
+    content: "“";
+}
+
+.source{
+    font-size: 2.7rem;
+    align-items: right;
+    font-weight: bold;
+    left: 3rem;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.source::before{
+    content: "-";
+}
+
+#loadQuote {
+    font-size: 2rem;;
+    width: 7em;
+    left: 12%;
+    bottom: 40px;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+    position: fixed;
+    font-weight: lighter;
+    border-radius: 6px;
+    font-family: cursive;
+    color: white;
+    background-color: rgba(255,255,255, .30);
+    padding: 5px;
+    cursor: pointer;
+  }
+  #loadQuote:hover {
+    background-color: rgba(255,255,255, .20);
+    transform: 0.5 ease;
+  }
