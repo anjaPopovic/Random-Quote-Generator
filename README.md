@@ -23,6 +23,7 @@ The **Random Quote Generator** is a simple web application that displays a rando
 - The `getRandomQuote()` function selects a random quote from the array.
 - The `showRandomQuote()` function updates the HTML content with the selected quote and changes the background color using the `getRandomColor()` function.
 
+## Application Interface
 ![image](https://github.com/user-attachments/assets/40bebc2e-68cc-49c5-b9e2-5802393c05c2)
 
 
