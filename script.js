@@ -65,29 +65,24 @@ var quotes = [
 
 //}
 
-function getRandomQuote () {
-    var lastRandomNum = -1; //variable for tracking last random number
-    var randomNum;
+var lastRandomNum = -1; // Declare outside function to keep its value between calls
 
-    //generate new random number who is not equal to last random number
-    do{
+function getRandomQuote() {
+    var randomNum;
+    do {
         randomNum = Math.floor(Math.random() * (quotes.length));
     } while (randomNum === lastRandomNum);
 
-    lastRandomNum = randomNum;
-
-    var randomQuote = quotes[randomNum];
-    return randomQuote;
+    lastRandomNum = randomNum; // Update last random number after generating new one
+    return quotes[randomNum];
 }
 
-
-function getRandomColor () {
+function getRandomColor() {
     var red = Math.floor(Math.random() * 255);
-	var green = Math.floor(Math.random() * 255);
-	var blue = Math.floor(Math.random() * 255);
-    var yellow = Math.floor(Math.random() * 255)
-	var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ',' + yellow + ')';
-	return randomColor;
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+    var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    return randomColor;
 }
 
 function showRandomQuote() {
